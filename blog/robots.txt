@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://pranavgovindu.github.io/blog/sitemap.xml
