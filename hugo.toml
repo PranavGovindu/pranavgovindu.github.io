@@ -1,0 +1,111 @@
+baseURL = "https://pranavgovindu.github.io/blog/"
+languageCode = "en-us"
+title = "Gp's yippity yappity"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+[pagination]
+  pagerSize = 5
+# These are root-level settings
+buildFuture = false
+buildExpired = false
+minify = true
+
+[params]
+  # All general params go under this single [params] block
+  env = "production" # Consider "development" when running `hugo server` locally
+  # title and description here are often used by themes for metadata, but the root `title` is primary for Hugo
+  title = "Gp's yippity yappity" # Redundant if root `title` is set, theme might use this
+  description = "Thoughts on ML, AI, and Software Engineering by Pranav Govindu"
+  author = "Pranav Govindu"
+
+  defaultTheme = "dark" # PaperMod specific
+  disableThemeToggle = false # PaperMod specific
+
+  ShowReadingTime = true
+  ShowShareButtons = true # Keep true only if you configure share options
+  ShareButtons = ["facebook", "linkedin", "whatsapp", "x"]  # only show these sharing buttons
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true # Make sure RSS is configured if true
+  UseHugoToc = true # Usually for Hugo's built-in ToC, PaperMod might have its own
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false # Set to true if you integrate a comments system
+  hidemeta = false
+  hideSummary = false
+  showtoc = true # PaperMod specific Table of Contents setting
+  tocopen = false # PaperMod specific
+
+  # Search Configuration
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+  [params.label] # PaperMod specific
+    text = "Gp's yippity yappity"
+    # icon = "/apple-touch-icon.png" # Optional: path to an icon file in your static folder
+    # iconHeight = 35
+
+  [params.homeInfoParams] # PaperMod specific
+  Title = "Welcome to GP's blog👋"
+  Content = "Welcome, Fellow Tarnished, to the Lands Between of the Intelligence build. Here I dump my Grace-fueled ramblings on code, AI, and obscure tech incantations. May your epochs be swift and your gradients ever vanishing."
+
+
+  [[params.socialIcons]] # PaperMod specific
+    name = "github"
+    url = "https://github.com/PranavGovindu"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/govindu-pranav-680b66290/"
+  [[params.socialIcons]]
+    name="twitter"
+    url="https://x.com/AcousimHss"
+
+[menu]
+  [[menu.main]]
+    identifier = "portfolio_home"
+    name = "Back to Portfolio"
+    url = "https://pranavgovindu.github.io/" # IMPORTANT: Full absolute URL to your main site
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    identifier = "archive"
+    name = "Archive"
+    url = "/archives/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 40
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 50
+  [[menu.main]]
+    identifier = "faq"
+    name = "FAQ"
+    url = "/faq/"
+    weight = 60
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  lineNos = true
+  style = "monokai" # A good Chroma style for dark themes
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
